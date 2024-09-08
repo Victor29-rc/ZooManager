@@ -1,0 +1,51 @@
+﻿<Window x:Class="ZooAPP.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ZooAPP"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="550" Width="800" >
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition />
+            <ColumnDefinition Width="40" />
+            <ColumnDefinition />
+            <ColumnDefinition  Width="40"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="10"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="200"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition/>
+            <RowDefinition Height="10"/>
+            <RowDefinition/>
+            <RowDefinition Height="10"/>
+            <RowDefinition/>
+            <RowDefinition Height="10"/>
+            <RowDefinition/>
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+        <Label Content="Zoo List" Grid.Column="1" Grid.Row="1"/>
+        <Label Content="Associated Animals List"  Grid.Column="3" Grid.Row="1"/>
+        <ListBox Name="listZoos" Grid.Column="1" Grid.Row="3" SelectionChanged="ListZoos_SelectionChanged"/>
+        <ListBox Name="listAssociatedAnimals" Grid.Column="3" Grid.Row="3"/>
+        <ListBox Name="listAnimals" Grid.Column="5" Grid.Row="3" Grid.RowSpan="7"/>
+
+        <TextBox Name="textEntry" Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="3"/>
+
+        <Button Content="Delete Zoo" Grid.Row="5" Grid.Column="1" Click="DeleteZoo_Click"/>
+        <Button Content="Remove Animal" Grid.Row="5" Grid.Column="3" Click="RemoveAnimal_Click"/>
+        <Button Content="Add Zoo" Grid.Row="9" Grid.Column="1" Click="AddZoo_Click"/>
+        <Button Content="Add Animal" Grid.Row="9" Grid.Column="3" Click="AddAnimal_Click"/>
+        <Button Content="Update Zoo" Grid.Row="11" Grid.Column="1" Click="UpdateZoo_Click"/>
+        <Button Content="Update Animal" Grid.Row="11" Grid.Column="3" Click="UpdateAnimal_Click"/>
+        <Button Content="Add Animal To Zoo" Grid.Row="1" Grid.Column="5"  Click="AddAnimalToZoo_Click"/>
+        <Button Content="Delete Animal" Grid.Row="11" Grid.Column="5" Click="DeleteAnimal_Click" />
+    </Grid>
+</Window>
